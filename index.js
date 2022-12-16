@@ -122,5 +122,88 @@ function imageSelection(apiArray) {
     });
   }
   addName();
+
+  function addGame() {
+    let divNumber = 0;
+    let hallOfFameForm = document.querySelector("form#hall-of-fame-form");
+    hallOfFameForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      let nameCheck = event.target.inGameName.value;
+      let nameExistanceCheck = document.querySelector(
+        `div#playerDiv${divNumber}`
+      );
+      if (nameCheck != "" && nameExistanceCheck.lastChild.nodeName != "IMG") {
+        let gamesList = document.querySelector(`div#playerDiv${divNumber}`);
+        divNumber = divNumber + 1;
+        console.log(`Game selection Div number:${divNumber}`);
+        let checkedBoxes = document.querySelectorAll(
+          "input[type = checkbox]:checked"
+        );
+        for (let checkedBox of checkedBoxes) {
+          let box = document.createElement("p");
+          box.setAttribute("class", "game-name");
+          box.textContent = checkedBox.value;
+          gamesList.append(box);
+        }
+      } else if ((nameExistanceCheck.lastChild.nodeName = "IMG")) {
+        divNumber = divNumber + 1;
+        console.log(`Game selection Div number:${divNumber}`);
+      }
+      let currentGames = document.querySelectorAll(
+        `div#playerDiv${divNumber} p.game-name`
+      );
+      for (let i = 0; i <= currentGames.length - 1; i++) {
+        for (let j = i + 1; j <= currentGames.length - 1; j++) {
+          if (currentGames[i].textContent === currentGames[j].textContent) {
+            currentGames[j].remove();
+          }
+        }
+      }
+      let playerDivElements = document.querySelectorAll(
+        "section#hall-of-fame div"
+      );
+      for (let divs of playerDivElements) {
+        let emptyCheck = divs.lastChild.nodeName;
+        if (emptyCheck === "IMG") {
+          divs.remove();
+        }
+      }
+    });
+  }
+  function divReset(divNumber) {
+    let reset = divNumber * 0;
+    return reset;
+  }
+  
+  addGame();
+  
+  function joinHallOfFame() {
+    let menuHallJoin = document.querySelector("p#join-hall-of-fame");
+    menuHallJoin.addEventListener("click", function () {
+      document.querySelector("form#hall-of-fame-form").reset()
+      let completeEntryCheck = document.querySelectorAll(
+        "section#hall-of-fame div"
+      );
+      for (let entry of completeEntryCheck) {
+        if (entry.lastChild.nodeName === "IMG") {
+          let hiddenButton = document.querySelector("button#select-image");
+          hiddenButton.setAttribute("style", "");
+          entry.remove();
+        } else if (entry.lastChild.nodeName != "IMG") {
+          let hiddenButton = document.querySelector("button#select-image");
+          hiddenButton.setAttribute("style", "");
+        }
+      }
+      let hallSectionCheck = document.querySelector("section#hall-of-fame");
+      console.log(hallSectionCheck);
+      console.log(hallSectionCheck.lastChild.name);
+      if (hallSectionCheck.lastChild.name === undefined) {
+        let hiddenButton = document.querySelector("button#select-image");
+        hiddenButton.setAttribute("style", "");
+      }
+    });
+  }
+  joinHallOfFame();
+  
   
   
