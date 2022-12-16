@@ -63,3 +63,61 @@ input.signUp:hover::placeholder{
 }
 
 /* page navigation section */
+nav p{
+    display: inline;
+    padding-left:70px;
+    color:var(--colorRed);
+    font-size:20px;
+}
+nav p:hover{
+ color:var(--colorWhite);
+ font-weight:bolder;
+}
+nav{
+    padding-bottom:25px;
+    padding-top:25px;
+    background-color:var(--colorBlack);
+    z-index:+1;
+    position:fixed;
+    top: 10px;
+    width:100%;
+}
+
+nav input{
+    margin-left:40px;
+    height:40px;
+    width:270px;
+}
+
+nav input::placeholder{
+    font-size:20px;
+    text-align: center;
+    color: var(--colorRed);
+    opacity:70%;
+}
+
+nav form button{
+    height:38px;
+    width:90px;
+    font-weight:bolder;
+    border-radius:20px;
+    font-size:20px;
+    color:var(--colorRed);
+    background-color:var(--colorWhite);
+    border:0px;
+}
+
+nav form button:hover{
+
+    border:2px solid white;
+    color:var(--colorRed);
+    background-color:var(--colorBlack);
+}
+
+nav form {
+    display:inline;
+}
+
+nav a{
+    text-decoration:none ;
+}
