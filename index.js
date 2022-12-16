@@ -17,4 +17,11 @@ function fetchData(callBack) {
     });
   }
   formDisplay();
+
+  function submitAlert() {
+    function alertTimeout() {
+      alert("Sign up successful");
+    }
+    setTimeout(alertTimeout, 10);
+  }
   
