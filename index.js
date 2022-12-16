@@ -216,5 +216,28 @@ function imageSelection(apiArray) {
    alert("Thank you for your feedback")
     })
    }feedBackForm()
+
+   function colorChange(){
+    let firstColor = document.querySelectorAll("section#hall-of-fame div")
+    firstColor.forEach(function(element){
+    setInterval(function (){element.style.color = "#EC0808"},250)
+    })
+    let secondColor = document.querySelectorAll("section#hall-of-fame div")
+    secondColor.forEach(function(element){
+    setInterval(function (){element.style.color = "#FF00B7"},500)
+    })
+    let thirdColor = document.querySelectorAll("section#hall-of-fame div")
+    thirdColor.forEach(function(element){
+    setInterval(function (){element.style.color = "#0084FF"},750)
+    })
+    let fourthColor = document.querySelectorAll("section#hall-of-fame div")
+    fourthColor.forEach(function(element){
+    setInterval(function (){element.style.color = "#F1D302"},1000)
+    })
+    let fifthColor = document.querySelectorAll("section#hall-of-fame div")
+    fifthColor.forEach(function(element){
+    setInterval(function (){element.style.color = "#00FFCC"},1250)
+    })}
+    
   
   
