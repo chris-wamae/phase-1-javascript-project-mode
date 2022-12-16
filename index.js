@@ -68,4 +68,59 @@ function imageSelection(apiArray) {
   }
   
   fetchData(imageSelection);
+
+  function addName() {
+    let divNumber = 0;
+    let hallOfFameForm = document.querySelector("form#hall-of-fame-form");
+    hallOfFameForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      let wholeSection = document.querySelector(
+        `section#hall-of-fame div#playerDiv${divNumber}`
+      );
+      if (
+        event.target.inGameName.value != "" &&
+        wholeSection.lastChild.nodeName === "IMG"
+      ) {
+        let setInGameName = document.createElement("p");
+        setInGameName.setAttribute("class", "in-game-name");
+        setInGameName.textContent = event.target.inGameName.value.toUpperCase();
+        let exitButton = document.createElement("button");
+        exitButton.textContent = "X";
+        colorChange()
+  
+        let displayDiv = document.querySelector(`div#playerDiv${divNumber}`);
+        displayDiv.append(setInGameName);
+        displayDiv.append(exitButton);
+        exitButton.addEventListener("click", function () {
+          document.querySelector("p#join-hall-of-fame").setAttribute("style", "");
+          displayDiv.remove();
+        });
+        divNumber = divNumber + 1;
+        console.log(`Name selection Div number:${divNumber}`);
+  
+        let currentNames = document.querySelectorAll(
+          `section#hall-of-fame p.in-game-name`
+        );
+  
+        for (let i = 0; i <= currentNames.length - 1; i++) {
+          for (let j = i + 1; j <= currentNames.length - 1; j++) {
+            if (currentNames[i].textContent === currentNames[j].textContent) {
+              currentNames[j].nextSibling.remove()
+              currentNames[j].remove();
+             
+              //alert("User already exists")
+            }
+          }
+        }
+        } else {
+        if (wholeSection.lastChild.nodeName === "IMG") {
+          divNumber = divNumber + 1;
+          console.log(`Name selection Div number:${divNumber}`);
+        }
+      }
+      document.querySelector("p#join-hall-of-fame").setAttribute("style", "none");
+    });
+  }
+  addName();
+  
   
