@@ -254,6 +254,64 @@ h1#main-header{
     height:80px;
     line-height:80px;
 }
+section#hall-of-fame{
+    position: relative;
+    top:-675px;
+
+}
+
+section#hall-of-fame div{
+    text-align:center;
+    background-color:var(--colorBlack);
+    margin-bottom:20px;
+    padding-bottom:20px;
+    color:var(--colorWhite);
+   
+}
+
+section#hall-of-fame div p.game-name{
+display:inline;
+margin-right:300px;
+text-align:left;
+}
+
+section#hall-of-fame div button + p{
+padding-right:235px;
+}
+
+
+section#hall-of-fame div button{
+display:block;
+width:30px;
+height:30px;
+margin-left:auto;
+margin-right: auto;
+color:var(--colorRed);
+background-color: var(--colorBlack);
+font-weight: bolder;
+
+}
+section#hall-of-fame div button:hover{
+    color:var(--colorBlack);
+    background-color: var(--colorRed); 
+    font-weight: bolder;
+    }
+
+section#hall-of-fame div p.in-game-name{
+font-size:32px;
+font-weight:bolder;
+padding-top:10px;
+padding-bottom:10px;
+font-family: 'Times New Roman', Times, serif;
+font-style:oblique;
+}
+
+section#hall-of-fame div img{
+    margin-top:10px;
+    border:1px solid white;
+    width:140px;
+    height:140px;
+    }
 
 /* feedback form section */
 section#feedback-form{
