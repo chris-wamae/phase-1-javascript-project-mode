@@ -22,7 +22,7 @@ For you to use the content on this repo ensure you have the following:
 4. Go Live in Visual Studio Code
 
 Alernatively, you can use the following link to access the deployed
-  site: **https://chris-wamae.github.io/phase-1-javascript-project-mode/#main-header**
+  site: **https://chris-wamae.github.io/phase-1-javascript-project-mode/**
 
 
 Status:
