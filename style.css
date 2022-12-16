@@ -233,3 +233,24 @@ img#player-avatar{
     width:120px;
     height:120px;
 }
+
+/*hall of fame */
+section#hall-of-fame{
+    position:relative;
+    top:-600px;
+}
+
+h1#main-header{
+    text-align: center;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    color:var(--colorRed);
+    font-weight:bolder;
+    position: relative;
+    top:-680px;
+    background-color: var(--colorBlack);
+    width:100%;
+    z-index:+2;
+    height:80px;
+    line-height:80px;
+}
