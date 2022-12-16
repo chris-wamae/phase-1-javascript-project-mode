@@ -65,7 +65,7 @@ input.signUp:hover::placeholder{
 /* page navigation section */
 nav p{
     display: inline;
-    padding-left:70px;
+    padding-left:90px;
     color:var(--colorRed);
     font-size:20px;
 }
@@ -86,7 +86,7 @@ nav{
 nav input{
     margin-left:40px;
     height:40px;
-    width:270px;
+    width:200px;
 }
 
 nav input::placeholder{
@@ -102,8 +102,8 @@ nav form button{
     font-weight:bolder;
     border-radius:20px;
     font-size:20px;
-    color:var(--colorRed);
-    background-color:var(--colorWhite);
+    color:var(--colorWhite);
+    background-color:var(--colorRed);
     border:0px;
 }
 
