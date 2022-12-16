@@ -254,3 +254,49 @@ h1#main-header{
     height:80px;
     line-height:80px;
 }
+
+/* feedback form section */
+section#feedback-form{
+    margin-top:120px;
+    text-align:center;
+    width:300px;
+    margin-left:auto;
+    margin-right:auto;
+    height:250px;
+    line-height:40px;
+    background-color:var(--colorBlack);
+}
+
+input#feedback-input{
+    margin-top:20px;
+    height:50px;
+}
+section#feedback-form input{
+    margin-bottom:20px;
+
+}
+
+section#feedback-form h4{
+color:var(--colorRed);
+font-size:25px;
+}
+
+section#feedback-form button{
+width:80px;
+height:30px;
+border-radius:20px;
+border:0px;
+color:var(--colorBlack);
+background-color:var(--colorRed);
+font-weight:bold;
+}
+
+section#feedback-form button:hover{
+    color:var(--colorRed);
+    background-color:var(--colorWhite);
+}
+
+section#feedback-form input::placeholder{
+    margin-bottom:20px;
+    text-align:center;
+}
