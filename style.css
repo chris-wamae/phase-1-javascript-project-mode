@@ -1,0 +1,9 @@
+/* re-usable classes */
+:root {
+    --colorBlack:#000;
+    --colorWhite:#FFF;
+    --colorRed:#fa4554;
+    
+    --fontOne:Arial, Helvetica, sans-serif;
+
+}
