@@ -8,14 +8,14 @@ document.addEventListener("DOMContentLoaded",function(){
 
 function formDisplay() {
   //This fuction creates the sign up form and hides and displays it whenever it is needed
-  document.querySelector("section#sign-up").style.display = "none";
+  document.querySelector("section#sign-up").style.display = "none"; //hides the form 
   let signUp = document.querySelector("p#sign-up-nav");
   signUp.addEventListener("click", function () {
-    document.querySelector("section#sign-up").setAttribute("style", "");
+    document.querySelector("section#sign-up").setAttribute("style", ""); //shows the form
     let signUpSubmit = document.querySelector("button#sign-up-button");
     signUpSubmit.addEventListener("click", function (event) {
       event.preventDefault();
-      document.querySelector("section#sign-up").style.display = "none";
+      document.querySelector("section#sign-up").style.display = "none"; //hides the form
     });
   });
 }
@@ -63,13 +63,13 @@ function imageSelection(apiArray) {
     playerDiv.setAttribute("id", `playerDiv${divNumber}`);
     divNumber = divNumber + 1;
     console.log(`Image selection Div number:${divNumber}`);
-    document.querySelector("p#join-hall-of-fame").style.display = "none";
+    document.querySelector("p#join-hall-of-fame").style.display = "none"; //hides the form
 
     selectedImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
     let imageSection = document.querySelector("section#hall-of-fame");
     playerDiv.append(selectedImage);
     imageSection.append(playerDiv);
-    selectImage.style.display = "none";
+    selectImage.style.display = "none"; //hides the form
   });
 }
 
@@ -128,7 +128,7 @@ function addName() {
         console.log(`Name selection Div number:${divNumber}`);
       }
     }
-    document.querySelector("p#join-hall-of-fame").setAttribute("style", "none");
+    document.querySelector("p#join-hall-of-fame").setAttribute("style", "none");//hides the form
   });
 }
 addName();
@@ -207,7 +207,7 @@ function joinHallOfFame() {
         entry.remove();
       } else if (entry.lastChild.nodeName != "IMG") {
         let hiddenButton = document.querySelector("button#select-image");
-        hiddenButton.setAttribute("style", "");
+        hiddenButton.setAttribute("style", ""); //shows the element
       }
     }
     let hallSectionCheck = document.querySelector("section#hall-of-fame");
@@ -225,16 +225,16 @@ joinHallOfFame();
 //This function also alerts a user that their feedback has been submitted when the sumbit 
 //button is clicked 
 function feedBackForm() {
-  document.querySelector("section#feedback-form").style.display = "none";
+  document.querySelector("section#feedback-form").style.display = "none"; //hides the form
   document
     .querySelector("p#leave-feedback")
     .addEventListener("click", function () {
-      document.querySelector("section#feedback-form").setAttribute("style", "");
+      document.querySelector("section#feedback-form").setAttribute("style", ""); //shows the element
     });
   document
     .querySelector("form#feedback")
     .addEventListener("submit", function () {
-      document.querySelector("section#feedback-form").style.display = "none";
+      document.querySelector("section#feedback-form").style.display = "none"; //hides the form
       alert("Thank you for your feedback");
     });
 }
