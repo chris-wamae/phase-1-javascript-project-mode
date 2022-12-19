@@ -158,12 +158,13 @@ section#join-hall-of-fame img{
 }
 
 section#join-hall-of-fame button{
-color:var(--colorRed);
-background-color:var(--colorBlack);
+color:var(--colorBlack);
+background-color:var(--colorRed);
 border:2px solid white;
 width:100px;
 height:50px;
 border-radius:40px;
+font-weight:bolder;
 }
 
 section#join-hall-of-fame input[type = "checkbox"]{
@@ -183,8 +184,8 @@ section#join-hall-of-fame input[type ="text"]::placeholder{
     }
 
 section#join-hall-of-fame button[type ="submit"]{
-    color:var(--colorRed);
-    background-color:var(--colorBlack);
+    color:var(--colorBlack);
+    background-color:var(--colorRed);
     border:2px solid white;
     width:160px;
     height:60px;

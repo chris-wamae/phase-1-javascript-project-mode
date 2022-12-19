@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded",function(){
+  //Prevents the javascript from being run before the html loads
   function fetchData(callBack) {
   fetch("https://valorant-api.com/v1/playercards")
     .then((response) => response.json())
@@ -6,6 +7,7 @@ document.addEventListener("DOMContentLoaded",function(){
 }
 
 function formDisplay() {
+  //This fuction creates the sign up form and hides and displays it whenever it is needed
   document.querySelector("section#sign-up").style.display = "none";
   let signUp = document.querySelector("p#sign-up-nav");
   signUp.addEventListener("click", function () {
@@ -20,26 +22,29 @@ function formDisplay() {
 formDisplay();
 
 function submitAlert() {
+  //alerts a user that their sign up was successful
   function alertTimeout() {
     alert("Sign up successful");
   }
   setTimeout(alertTimeout, 10);
 }
 
-//selects the next Image when choosing an avatar
 
+//allows a user to navigate through images fetched from the api to the DOM
+//a user can navigate to the next image and also go back to the previous image
+//a user can also select an image to be displayed as their avatar
 function imageSelection(apiArray) {
   let firstImage = 0;
   let currentImage = document.querySelector("img#player-avatar");
   currentImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
   console.log(apiArray);
-
+//displayes the next image when clicked 
   let nextImage = document.querySelector("button#next-image");
   nextImage.addEventListener("click", function () {
     firstImage = firstImage + 1;
     currentImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
   });
-
+//displays the previous image when clicked
   let previousImage = document.querySelector("button#previous-image");
   previousImage.addEventListener("click", function () {
     if (firstImage > 0) {
@@ -49,7 +54,7 @@ function imageSelection(apiArray) {
     }
     currentImage.setAttribute("src", apiArray[firstImage]["displayIcon"]);
   });
-
+//selects the currently displayed image to be the users avatar
   let selectImage = document.querySelector("button#select-image");
   let divNumber = 0;
   selectImage.addEventListener("click", function () {
@@ -70,6 +75,10 @@ function imageSelection(apiArray) {
 
 fetchData(imageSelection);
 
+//Allows a user to input  a name which will be combined with the previously selected
+//image and added to the DOM 
+//It also a button below the name which allows a user to delete their added name and
+//exit the hall of fame
 function addName() {
   let divNumber = 0;
   let hallOfFameForm = document.querySelector("form#hall-of-fame-form");
@@ -102,7 +111,7 @@ function addName() {
       let currentNames = document.querySelectorAll(
         `section#hall-of-fame p.in-game-name`
       );
-
+//removes duplicate names from the DOM
       for (let i = 0; i <= currentNames.length - 1; i++) {
         for (let j = i + 1; j <= currentNames.length - 1; j++) {
           if (currentNames[i].textContent === currentNames[j].textContent) {
@@ -124,6 +133,9 @@ function addName() {
 }
 addName();
 
+//Allows a user to select the type of Games they play and have them added to the DOM next to
+//their inputted in game name and avatar
+//It also prevents games from being added when there is no username and avatar added
 function addGame() {
   let divNumber = 0;
   let hallOfFameForm = document.querySelector("form#hall-of-fame-form");
@@ -178,6 +190,9 @@ function divReset(divNumber) {
 
 addGame();
 
+//This function allows a user to join the hall of fame by clicking the Join hall of fame menu link
+//It scrolls the page to the Join hall of fame form when clicked
+//It shows the select image button when clicked
 function joinHallOfFame() {
   let menuHallJoin = document.querySelector("p#join-hall-of-fame");
   menuHallJoin.addEventListener("click", function () {
@@ -206,6 +221,9 @@ function joinHallOfFame() {
 }
 joinHallOfFame();
 
+//This function creates a feedback form in which a user enters their name and feedback
+//This function also alerts a user that their feedback has been submitted when the sumbit 
+//button is clicked 
 function feedBackForm() {
   document.querySelector("section#feedback-form").style.display = "none";
   document
@@ -222,6 +240,8 @@ function feedBackForm() {
 }
 feedBackForm();
 
+//This function constantly changes the colors of the text 
+//in the Hall of Fame 
 function colorChange() {
   let firstColor = document.querySelectorAll("section#hall-of-fame div");
   firstColor.forEach(function (element) {
@@ -254,7 +274,11 @@ function colorChange() {
     }, 1250);
   });
 }
-function hallOfFameScroll() {}
+//function hallOfFameScroll() {}
+
+//This allows a user to search for a player using their username
+//If the search result matches with a user currenlty in the DOM the 
+//page will scroll to the player
 function searchPlayer() {
   let searchForm = document.querySelector("form#search-form");
   searchForm.addEventListener("submit", function scroller(event) {
@@ -274,6 +298,7 @@ function searchPlayer() {
 }
 searchPlayer();
 
+//Prevents the default behavior of the form 
 function preventDefault(){
   let preventDefaultBehavior = document.querySelector("form#search-form");
   preventDefaultBehavior.addEventListener("submit", function scroller(event) {
