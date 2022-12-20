@@ -17,6 +17,9 @@ function formDisplay() {
 }
 formDisplay();
 
+//This function hides the form after sign-up
+//It also alerts a user when they try to sign up but have left an input empty
+//Finally it alerts a user when they sign-up successfully
 function handleSignUpAlert(){
 let form = document.getElementById("sign-up-form")
 form.addEventListener("submit",function(event){
@@ -34,7 +37,7 @@ else{
   submitAlert()
 }
 })
-}handleAlert()
+}handleSignUpAlert()
 
 
 
@@ -42,7 +45,7 @@ else{
 function submitAlert() {
   //alerts a user that their sign up was successful
   function alertTimeout() {
-    alert("Sign up successful");
+    alert("Successful");
   }
   setTimeout(alertTimeout, 10);
 }
@@ -249,14 +252,26 @@ function feedBackForm() {
     .addEventListener("click", function () {
       document.querySelector("section#feedback-form").setAttribute("style", ""); //shows the element
     });
-  document
-    .querySelector("form#feedback")
-    .addEventListener("submit", function () {
-      document.querySelector("section#feedback-form").style.display = "none"; //hides the form
-      alert("Thank you for your feedback");
-    });
 }
 feedBackForm();
+
+function handleFeedbackAlert(){
+  document.querySelector("form#feedback").addEventListener("submit",
+  function (event) {
+    event.preventDefault()
+    let feedBackMessage = event.target.feedbackInput.value
+    let feedbackName =  event.target.feedbackName.value
+    if(feedBackMessage === "" || feedbackName === ""){
+      alert("Please fill out all the fields")
+    }
+    else{document.querySelector("form#feedback").reset()
+    document.querySelector("section#feedback-form").style.display = "none"; //hides the form
+    submitAlert()}
+  });
+}handleFeedbackAlert()
+
+
+
 
 //This function constantly changes the colors of the text 
 //in the Hall of Fame 
