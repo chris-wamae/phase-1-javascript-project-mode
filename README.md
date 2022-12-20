@@ -1,7 +1,7 @@
 # Gaming Hall of Fame App
-This application allows a user to select an avatar by navigating through a list of images fetched from an API of the video game Valorant , add the in gamename 
-and the type of games they play and have the information added to the DOM
-under a list known as the Hall of Fame.The  list allows the user to exit the Hall of Fame by clicking the X button under their name. Other features of the application include a sign-up form, a leave feedback form and a search bar. The search bar allows a user to find players who are in the Hall of Fame by typing their names in.
+This application allows a user to select an avatar by navigating through a list of images fetched from an API of the video game Valorant , add the in game name, 
+and the type of games they play.These are then added to the DOM
+under a list known as the Hall of Fame on submission.The user can exit the Hall of Fame by clicking the X button under their name. Other features of the application include a sign-up form, a leave feedback form and a search bar. The search bar allows a user to find players who are in the Hall of Fame by typing their names in.
  
 ## REQUIREMENTS
 ### Prerequisites
@@ -22,7 +22,7 @@ For you to use the content on this repo ensure you have the following:
 4. Go Live in Visual Studio Code
 
 Alernatively, you can use the following link to access the deployed
-  site: **https://chris-wamae.github.io/phase-1-javascript-project-mode/#main-header**
+  site: **https://chris-wamae.github.io/phase-1-javascript-project-mode/**
 
 
 Status:
