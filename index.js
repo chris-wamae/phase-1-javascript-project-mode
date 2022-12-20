@@ -1,3 +1,5 @@
+//Scroll a user to their entry when they join the hall of fame
+//Make feedback form larger
 document.addEventListener("DOMContentLoaded", function () {
   //Prevents the javascript from being run before the html loads
   function fetchData(callBack) {

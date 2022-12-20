@@ -359,3 +359,75 @@ section#feedback-form input::placeholder{
     margin-bottom:20px;
     text-align:center;
 }
+
+/*Media queries to make the page responsive*/
+@media only screen and (max-device-width:1310px){
+nav p{
+padding-left:50px;
+}
+}
+
+@media only screen and (max-device-width:1050px){
+    nav p{
+    padding-left:30px;
+    font-size:15px;
+    
+    }
+    nav p#join-hall-of-fame{
+        padding-left:70px;
+        font-size:15px;
+        
+        }
+    nav input{
+    width:200px;
+    height:30px;
+        
+        }
+    nav button#player-search{
+          width:70px;
+          height:30px;
+          font-size:15px;
+            
+        }
+    section#join-hall-of-fame{
+   text-align:right;
+   width:400px;
+   font-size:20px;
+ /* width:700px;
+ padding-right:100px; */
+    }
+    section#join-hall-of-fame h2{
+        font-size:26px;
+      /* width:700px;
+      padding-right:100px; */
+         }
+
+         section#join-hall-of-fame p{
+            font-size:15px;
+            text-align:center;
+            padding-left:80px;
+          /* width:700px;
+          padding-right:100px; */
+             }
+             section#join-hall-of-fame img{
+                margin-right:50px;
+                 }
+            img#hero-image{
+                width:400px;
+                margin-left:0px;
+           }
+           section#join-hall-of-fame button{
+            width:80px;
+            height:30px;
+            font-size:14px;
+             }
+
+             section#join-hall-of-fame input{
+            width:20px;
+            height:20px;
+                 }
+            
+             #two-player-label,#multi-player-label,#massively-player-label{
+                font-size:14px;
+                 }
+    }
