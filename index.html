@@ -8,9 +8,10 @@
     <link rel="stylesheet" href="./style.css" />
     <script type="text/javascript" src="./index.js"></script>
   </head>
+
   <body>
     <section id="menu">
-        <nav>
+        <nav>        
           <a href="#hall-of-fame-form"><p id="join-hall-of-fame">Join the Hall of Fame</p></a>
           <a href="#main-header"><p>Gaming Hall of Fame</p></a> 
           <p id="sign-up-nav">Sign Up</p>
@@ -21,20 +22,22 @@
          </form>
         </nav>
       </section>
+
       <section id="sign-up">
-        <form>
+        <form id="sign-up-form">
           <h4>Sign Up</h4>
-          <input type="text" placeholder="Enter your Name" class="signUp" />
+          <input type="text" placeholder="Enter your Name" class="signUp" id="signUpName"/>
           <br />
-          <input type="text" placeholder="Enter your Email" class="signUp" />
+          <input type="text" placeholder="Enter your Email" class="signUp" id="signUpEmail"/>
           <br />
-          <input type="password" placeholder="Create a password" class="signUp" />
+          <input type="password" placeholder="Create a password" class="signUp" id="signUpPassword"/>
           <br />
-          <button type="submit" id="sign-up-button" onclick="submitAlert()">
+          <button type="submit" id="sign-up-button">
             Sign Up
           </button>
         </form>
       </section>
+
       <section id="feedback-form">
         <h4>Feedback form</h4>
         <form id="feedback">
@@ -45,6 +48,7 @@
           <button type="submit" id="submit-feedback">Submit</button>
         </form>
       </section>
+
       <section id="join-hall-of-fame">
         <form id="hall-of-fame-form">
           <h2>Join the Hall of Fame</h2>
@@ -65,6 +69,7 @@
           <button type="submit">Join</button>
         </form>    
       </section>
+
       <img src="./images/valorant_jett .jpg" alt="" id="hero-image"> 
     <h1 id="main-header">GAMING HALL OF FAME</h1>
     <section id="hall-of-fame">

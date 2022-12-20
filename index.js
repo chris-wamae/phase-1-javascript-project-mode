@@ -12,14 +12,32 @@ function formDisplay() {
   let signUp = document.querySelector("p#sign-up-nav");
   signUp.addEventListener("click", function () {
     document.querySelector("section#sign-up").setAttribute("style", ""); //shows the form
-    let signUpSubmit = document.querySelector("button#sign-up-button");
-    signUpSubmit.addEventListener("click", function (event) {
-      event.preventDefault();
-      document.querySelector("section#sign-up").style.display = "none"; //hides the form
-    });
+    // 
   });
 }
 formDisplay();
+
+function handleSignUpAlert(){
+let form = document.getElementById("sign-up-form")
+form.addEventListener("submit",function(event){
+event.preventDefault()
+let nameInput = event.target.signUpName.value
+let emailInput = event.target.signUpEmail.value
+let passwordInput = event.target.signUpPassword.value
+if(nameInput === "" || emailInput === "" || passwordInput === ""){
+  alert("Please fill all fields to sign up")
+}
+else{
+  event.preventDefault();
+  document.querySelector("section#sign-up").style.display = "none"; //hides the form
+  form.reset()
+  submitAlert()
+}
+})
+}handleAlert()
+
+
+
 
 function submitAlert() {
   //alerts a user that their sign up was successful
