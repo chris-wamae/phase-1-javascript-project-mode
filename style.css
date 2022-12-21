@@ -602,3 +602,59 @@ img#hero-image{
     }
 
 }
+
+
+@media only screen and (max-device-width:450px){
+    img#hero-image{
+        position:absolute;
+        width:500px;
+        height:400px;
+        top:810px;
+        left:-200px;
+     }
+    section#join-hall-of-fame{
+        width:570px;
+        left:-150px;
+        top:0px;
+        margin-bottom:500px;
+    }
+   h1#main-header{
+    position:relative;
+    font-size:30px;
+    top:-100px;
+    width:500px;
+   }
+   nav{
+    width:500px;
+   }
+   nav p{
+    font-size: 11px;
+    padding-left:10px;
+   }
+
+  #player-search{
+    position:absolute;
+    width:50px;
+    height:20px;
+    left:392px;
+    top:50px;
+
+   }
+   
+   #hall-of-fame div{
+    position:relative;
+    top:550px;
+    width:500px;
+   }
+
+   p.game-name + p.game-name{
+position: relative;
+left:-500px;
+   }
+
+p.game-name + p.game-name + p.game-name{
+    position: relative;
+    left:-750px;
+       }
+
+}
