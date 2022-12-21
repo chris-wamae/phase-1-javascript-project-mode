@@ -1,5 +1,4 @@
-//Scroll a user to their entry when they join the hall of fame
-//Make feedback form larger
+
 document.addEventListener("DOMContentLoaded", function () {
   //Prevents the javascript from being run before the html loads
   function fetchData(callBack) {
@@ -120,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let displayDiv = document.querySelector(`div#playerDiv${divNumber}`);
         displayDiv.append(setInGameName);
         displayDiv.append(exitButton);
+        displayDiv.scrollIntoView({behavior:"smooth"})
         exitButton.addEventListener("click", function () {
           document
             .querySelector("p#join-hall-of-fame")
@@ -138,6 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if (currentNames[i].textContent === currentNames[j].textContent) {
               currentNames[j].nextSibling.remove();
               currentNames[j].remove();
+              
 
               //alert("User already exists")
             }
